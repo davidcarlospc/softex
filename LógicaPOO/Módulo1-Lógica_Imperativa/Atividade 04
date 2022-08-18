@@ -1,0 +1,35 @@
+Algoritmo de cadastro que deve ler dados fornecidos pelo usuário:
+ 
+nome: caracter
+endereco: caracter
+cidade: caracter
+cpf: inteiro
+rg: inteiro
+idade: inteiro
+nome_pai: caracter
+nome_mae: caracter
+peso: real
+renda: real
+ 
+escreva “Informe seu Nome:”
+leia nome
+escreva “Informe seu Endereço:”
+leia endereco
+escreva “Informe a sua Cidade:”
+leia cidade
+escreva “Informe o seu CPF:”
+leia cpf
+escreva “Informe o seu RG:“
+leia rg
+escreva “Informe a sua idade”
+leia idade
+escreva “Informe o nome do seu pai”
+leia nome_pai
+escreva “Informe o nome da sua mãe”
+leia nome_mae
+escreva “Informe o seu peso”
+leia peso
+escreva “Informe a sua renda bruta”
+leia renda
+
+escreva (“Seus dados informados neste cadastro são: “Nome: ”, nome, “ Endereço: ”, endereco, “ CPF: ”, cpf, “ RG: ”, rg, “ Idade: ”, idade, “ Nome do pai: ”, nome_pai, “ Nome da mãe: ”, nome_mae, “ Peso: ”, peso, “ Renda Bruta: ”, renda)
