@@ -1,0 +1,12 @@
+1 - A primeira figura (abaixo) mostra o padrão de organização de uma turma de 25 alunos, considerando quem gosta de matemática (M) e quem gosta de Português (P):
+
+
+2 - Na segunda imagem, observa-se que ao serem adicionados 11 alunos, a organização foi mantida (destaque) e foram acrescentadas uma linha (abaixo) e uma coluna (à direita).
+
+O acréscimo dos 11 alunos foi realizado possibilitando também a ocorrência de um padrão para essa nova organização. Agora, ao olhar separadamente para cada linha, ou para cada coluna, observa-se em todos os casos, haverem 04 alunos que gostam de uma disciplina e 02 que gostam da outra. Ou seja, a soma será sempre 4P + 2M ou 4M + 2P.
+
+
+
+3 - Na imagem 3, observa-se a nova organização após a ausência do professor. Ao voltar, mesmo sem ter a distribuição dos alunos decorada e por ter havido apenas uma troca, foi fácil ele fazer uma verificação e perceber que na linha 5 (3P + 3M) e na coluna 5 (3P + 3M) não havia correspondência com o padrão. Portanto, ao olhar o aluno sentado na posição que corresponde justamente à linha 5 e coluna 5, sabe-se que o aluno desta posição fez uma troca, portanto da disciplina de Matemática (M) para a de Português (P).
+
+
