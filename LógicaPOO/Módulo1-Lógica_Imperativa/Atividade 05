@@ -1,0 +1,158 @@
+Elabore um algoritmo que possa descobrir, através de perguntas e respostas, qual meio de transporte o usuário está pensando.
+O usuário deverá escolher uma das seguintes opções:
+ 
+- Trator
+- Moto
+- Bicicleta
+- Trem
+- Carro
+- Caminhão
+- Ônibus
+- Paraquedas
+- Balão
+- Avião
+- Helicóptero
+- Submarino
+- Barco
+- Navio
+- Lancha
+ 
+Para chegar ao resultado, só devem ser usadas perguntas que retornem "Sim" ou "Não".
+ 
+Exemplo:
+É terrestre? Sim.
+Cabe apenas uma pessoa? Sim.
+É pesado? Não.
+Tem pedal? Sim.
+Então, o transporte escolhido foi a bicicleta.
+ 
+Para chegar ao resultado de cada uma das opções, use o modelo ilustrado na imagem em anexo. 
+ 
+Inicio
+Var
+resposta: lógico;
+
+Escreva (“Responda sobre o transporte desejado ”);
+
+Escreva (“É terrestre? ”);
+leia (resposta);
+Se (resposta = sim) então
+	Escreva (“Cabe apenas uma pessoa?”);
+	leia (resposta);
+	Se (resposta = sim) então
+		Escreva (“É pesado?”)
+		leia (resposta);
+		Se (resposta = sim) então
+			Escreva (“Seu transporte é um Trator”);
+		fimse
+		Escreva (“ Tem pedal?”)
+		leia (resposta);
+		Se (resposta = sim) então
+			Escreva (“Seu transporte é uma Bicicleta”);
+fimse
+fimse
+fimse	
+Escreva (“ Usa capacete?”)
+leia (resposta);
+	Se (resposta = sim) então
+		Escreva (“Seu transporte é uma Moto”);
+	fimse
+	Escreva (“Tem passageiro?”)
+	leia (resposta);
+	Se (resposta = sim)  então
+		Escreva (“Usa trilho?”)
+		leia (resposta);
+		Se (resposta = sim) então
+			Escreva (“Seu transporte é um Trem”);
+		fimse
+		Escreva (“Anda na pista?”)
+		leia (resposta);
+		Se (resposta = sim) então
+			Escreva (“É alto?”)
+			leia (resposta);
+			Se (resposta = sim) então
+				Escreva (“Usa carroceria?”)
+				leia (resposta);
+				Se (resposta = sim) então
+					Escreva (“Seu transporte é um caminhão”)
+				fimse
+				Escreva (“Pode ter cobrador?”)
+				leia (resposta);
+				Se (resposta = sim) então
+					Escreva (“Seu transporte é um Ônibus”);
+				fimse
+			fimse
+			Escreva (“É veículo leve?”)
+			leia (resposta);
+			Se (resposta = sim) então
+				Escreva (“Seu transporte é um Carro”);
+			fimse
+		fimse
+	fimse
+fimse
+
+Escreva (“É aéreo? ”);
+leia (resposta);
+Se (resposta = sim) então
+	Escreva (“Precisa pular?”)
+	leia (resposta);
+	Se (resposta = sim) então
+		Escreva (“Seu transporte é uma asa delta”);
+	fimse
+	Escreva (“Viaja dentro?”)
+	leia (resposta);
+	Se (resposta = sim) então
+		Escreva (“É devagar?”)
+		leia (resposta);
+		Se (resposta = sim) então
+			Escreva (“Seu transporte é um balão”);
+		fimse
+		Escreva (“Tem piloto?”)
+		leia (resposta);
+		Se (resposta = sim) então
+			Escreva (“Possui asas fixas?”)
+			leia (resposta);
+Se (resposta = sim) então
+				Escreva (“Seu transporte é um avião”);
+			fimse
+			Escreva (“Faz voo vertical?”)
+			leia (resposta);
+Se (resposta = sim) então
+				Escreva (“Seu transporte é um helicóptero”);
+			fimse
+		fimse
+	fimse
+fimse
+
+Escreva (“É aquático? ”);
+leia (resposta);
+Se (resposta = sim) então
+	Escreva (“É coberto de água?”)
+	leia (resposta);
+	Se (resposta = sim) então
+		Escreva (“Seu transporte é um submarino”);
+	fimse
+	Escreva (“Navega na água”)
+	leia (resposta);
+	Se (resposta = sim) então
+		Escreva (“Possui vela?”)
+		leia (resposta);
+		Se (resposta = sim) então
+			Escreva (“Seu transporte é um barco”)
+		fimse
+		Escreva (“Possui motor?”)
+		leia (resposta);
+		Se (resposta = sim) então
+			Escreva (“É alto?”)
+			leia (resposta);
+			Se (resposta = sim) então
+				Escreva (“Seu transporte é um navio”);
+			fimse
+			Escreva (“Pode ser descoberto”)
+			leia (resposta);
+			Se (resposta = sim) então
+				Escreva (“Seu transporte é uma lancha”);
+			fimse
+		fimse
+	fimse
+fimse
