@@ -1,0 +1,30 @@
+Dados:
+
+ Nome: José Almeida da Silva
+- CPF: 12345678900
+- RG: 9517530
+- Altura: 1,78
+- Endereço: Rua A, 380 – Centro – Recife/PE
+ 
+Solução:
+ 
+A proposta das variáveis
+ 
+Propõe-se utilizar as variáveis denominadas nome, que será do tipo caracter, pois permite armazenar texto; cpf e rg, ambas serão do do tipo numérico inteiro, pois devem poder armazenar números (inteiros); altura, será do tipo numérico real, pois deve armazenar números inteiros ou racionais (frações); e endereço, também será do tipo caracter, pois necessitará armazenar dados contendo letras, números e/ou caracteres especiais. 
+ 
+ 
+Declaração das variáveis;
+ 
+var nome: caracter
+var cpf: inteiro
+var rg: inteiro
+var altura: real
+var endereco: caracter
+ 
+3.	Comando de atribuição
+ 
+nome <- “José Almeida da Silva”
+cpf <- 12345678900
+rg <- 9517530
+altura <- 1,78
+endereço <- “Rua A, 380 – Centro – Recife/PE”
