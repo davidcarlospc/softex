@@ -1,0 +1,68 @@
+Numa competição, sabe-se que Aristóteles (A), Platão (P) e Sócrates (S) estiveram somente uma vez nas posições primeiro, segundo e terceiro em três disciplinas. Inicialmente, cada um pode ter ficado em qualquer posição:
+Química:
+1º A/S/P 2º A/S/P 3º A/S/P
+Física:
+1º A/S/P 2º A/S/P 3º A/S/P
+Matemática
+1º A/S/P 2º A/S/P 3º A/S/P
+Sabe-se que Aristóteles não ficou em primeiro em química:
+Química:
+1º A/S/P 2º A/S/P 3º A/S/P
+Física:
+1º A/S/P 2º A/S/P 3º A/S/P
+Matemática
+1º A/S/P 2º A/S/P 3º A/S/P
+Sabe-se que Sócrates perdeu para Platão em Física (se perdeu, não pode ter sido primeiro):
+Química:
+1º A/S/P 2º A/S/P 3º A/S/P
+Física:
+1º A/S/P 2º A/S/P 3º A/S/P
+Matemática
+1º A/S/P 2º A/S/P 3º A/S/P
+
+Sabe-se ainda que Platão acertou mais que Aristóteles em matemática (se perdeu pra Platão, Aristóteles não pode ter sido primeiro)
+Química:
+1º A/S/P 2º A/S/P 3º A/S/P
+Física:
+1º A/S/P 2º A/S/P 3º A/S/P
+Matemática
+1º A/S/P 2º A/S/P 3º A/S/P
+Então, se Aristóteles não foi primeiro em Química nem em Matemática, foi primeiro em Física (e como foi primeiro, não pode ser segundo nem terceiro em Física)
+Química:
+1º A/S/P 2º A/S/P 3º A/S/P
+Física:
+1º A/S/P 2º A/S/P 3º A/S/P
+Matemática
+1º A/S/P 2º A/S/P 3º A/S/P
+Se Sócrates perdeu para Platão em Física (se Aristóteles foi o primeiro, então Platão foi segundo, logo Sócrates foi terceiro):
+Se Platão já foi segundo em Física, não pode ter sido segundo nas demais disciplinas
+Se Sócrates foi terceiro em Física, não pode ter sido terceiro nas demais
+Química:
+1º A/S/P 2º A/S/P 3º A/S/P
+Física:
+1º A/S/P 2º A/S/P 3º A/S/P
+Matemática
+1º A/S/P 2º A/S/P 3º A/S/P
+
+Se Platão acertou mais que Aristóteles em matemática, então ele não pode ser sido último, significa que Aristóteles foi terceiro em matemática e não em Química. Assim sabe-se que Platão foi terceiro em Química.
+Química:
+1º A/S/P 2º A/S/P 3º A/S/P
+Física:
+1º A 2º P 3º S
+Matemática
+1º A/S/P 2º A/S/P 3º A/S/P
+Se Aristóteles não ficou em primeiro em química (sendo Platão o terceiro), então Aristóteles foi segundo, e consequentemente Sócrates foi primeiro em Química.
+Química:
+1º A/S/P 2º A/S/P 3º A/S/P
+Física:
+1º A 2º P 3º S
+Matemática
+1º A/S/P 2º A/S/P 3º A/S/P
+Sendo assim, pode-se deduzir que Platão só pode ter sido primeiro e Sócrates só pode ter sido segundo em Matemática:
+Química:
+1º lugar: Sócrates, 2º lugar: Aristóteles, 3º lugar: Platão
+Física:
+1º lugar: Aristóteles, 2º lugar: Platão, 3º lugar: Sócrates
+Matemática
+1º lugar: Platão, 2º lugar: Sócrates, 3º lugar: Aristóteles
+
