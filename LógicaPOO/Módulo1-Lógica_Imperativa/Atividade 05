@@ -170,5 +170,5 @@ inicio
 			fimse
 		fimse
 	fimse							
-	escreval(“Pelas suas respostas, transporte escolhido foi ”, escolha)
+	escreval(“Pelas suas respostas, o transporte escolhido foi ”, escolha)
 fimalgoritmo
