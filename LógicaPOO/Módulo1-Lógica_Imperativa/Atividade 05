@@ -44,54 +44,54 @@ inicio
 		escreva (“Cabe apenas uma pessoa?”);
 		leia (resposta);
 		se (resposta = "sim") entao
-			Escreva (“É pesado?”)
+			Escreva (“É pesado?”);
 			leia (resposta);
-			Se (resposta = "sim") então
-				escolha =< "um Trator”;
+			Se (resposta == "sim") então
+				escolha <- "um Trator”;
 			senao 
-				escreva (“ Tem pedal?”)
+				escreva (“ Tem pedal?”);
 				leia (resposta);
 				Se (resposta = sim) então
-					escolha =< "uma bicicleta”;
+					escolha <- "uma bicicleta”;
 				fimse
 			fimse
 		senao 
 			escreva (“usa capacete?”);
 			leia (resposta);
-			Se (resposta = sim) então
-			escolha =< "uma moto”;
+			Se (resposta == "sim") então
+			escolha <- "uma moto”;
 			senao 	
 				escreva (“Tem passageiro?”);
 				leia (resposta);
-				Se (resposta = sim) então
-					escreva (“Usa trilho?”)
+				Se (resposta == "sim") então
+					escreva (“Usa trilho?”);
 					leia (resposta);
-					Se (resposta = "sim") então
-						escolha =< "um Trem”;
+					Se (resposta == "sim") então
+						escolha <- "um Trem”;
 					senao 
-						escreva (“Anda na pista?”)
+						escreva (“Anda na pista?”);
 						leia (resposta);
-						se (resposta = "sim") então
-							escreva (“É alto?”)
+						se (resposta == "sim") então
+							escreva (“É alto?”);
 							leia (resposta);
-							se (resposta = "sim") então
-								escreva (“Usa carroceria?”)
+							se (resposta == "sim") então
+								escreva (“Usa carroceria?”);
 								leia (resposta);
-								se (resposta = "sim") então
-									escolha =< "um caminhão”;
+								se (resposta == "sim") então
+									escolha <- "um caminhão”;
 								fimse
 							senao
-								escreva (“Pode ter um cobrador?”)
+								escreva (“Pode ter um cobrador?”);
 								leia (resposta);
-								se (resposta = "sim") então
-									escolha =< "um Ônibus”;
+								se (resposta == "sim") então
+									escolha <- "um Ônibus”;
 								fimse
 							fimse
 						senao
-							escreva (“É veículo leve?”)
+							escreva (“É veículo leve?”);
 								leia (resposta);
-								se (resposta = "sim") então
-									escolha =< "um Carro”;
+								se (resposta == "sim") então
+									escolha <- "um Carro”;
 								fimse
 						fimse
 					fimse
@@ -101,33 +101,33 @@ inicio
 	senao
 		escreva (“É aéreo? ”);
 		leia (resposta);
-		se (resposta = "sim") então
-			escreva (“Precisa pular?”)
+		se (resposta == "sim") então
+			escreva (“Precisa pular?”);
 			leia (resposta);
-			se (resposta = "sim") então
-				escolha =< "uma Asa Delta”;
+			se (resposta == "sim") então
+				escolha <- "uma Asa Delta”;
 			fimse
 		senao
-		escreva (“Viaja dentro?”)
+		escreva (“Viaja dentro?”);
 		leia (resposta);
-		se (resposta = "sim") então
-			escreva (“É devagar?”)
+		se (resposta == "sim") então
+			escreva (“É devagar?”);
 			leia (resposta);
-			se (resposta = "sim") então
-				escolha =< "um Balão”;
+			se (resposta == "sim") então
+				escolha <- "um Balão”;
 			senao
-				escreva (“Tem piloto?”)
+				escreva (“Tem piloto?”);
 				leia (resposta);
-				se (resposta = "sim") então
-					escreva (“Possui asas fixas?”)
+				se (resposta == "sim") então
+					escreva (“Possui asas fixas?”);
 					leia (resposta);
-					se (resposta = "sim") então
-						escolha =< "um Avião”;
+					se (resposta == "sim") então
+						escolha <- "um Avião”;
 					senao
-						escreva (“Faz voo vertical?”)
+						escreva (“Faz voo vertical?”);
 						leia (resposta);
-						se (resposta = "sim") então
-							escolha =< "um Helicóptero”;
+						se (resposta == "sim") então
+							escolha <- "um Helicóptero”;
 						fimse
 					fimse
 				fimse
@@ -135,32 +135,32 @@ inicio
 		senao
 			escreva (“É aquático? ”);
 			leia (resposta);
-			se (resposta = "sim") então
-				escreva (“É coberto de água?”)
+			se (resposta == "sim") então
+				escreva (“É coberto de água?”);
 				leia (resposta);
-				se (resposta = "sim") então
-					escolha =< "um Submarino”;
+				se (resposta == "sim") então
+					escolha <- "um Submarino”;
 				senao
-					escreva (“Navega na água?”)
+					escreva (“Navega na água?”);
 					leia (resposta);
-					se (resposta = "sim") então
-						escreva (“Possui Vela?”)
+					se (resposta == "sim") então
+						escreva (“Possui Vela?”);
 						leia (resposta);
-						se (resposta = "sim") então
-							escolha =< "um Barco”;
+						se (resposta == "sim") então
+							escolha <- "um Barco”;
 						senao 
-							escreva (“Possui Motor?”)
+							escreva (“Possui Motor?”);
 							leia (resposta);
-							se (resposta = "sim") então
-								escreva (“É alto?”)
+							se (resposta == "sim") então
+								escreva (“É alto?”);
 								leia (resposta);
-								se (resposta = "sim") então
-									escolha =< "um Navio”;
+								se (resposta == "sim") então
+									escolha <- "um Navio”;
 								senao 
-									escreva (“Pode ser descoberto?”)
+									escreva (“Pode ser descoberto?”);
 									leia (resposta);
-									se (resposta = "sim") então
-									escolha =< "uma Lancha”;
+									se (resposta == "sim") então
+									escolha <- "uma Lancha”;
 									fimse
 								fimse
 							fimse
