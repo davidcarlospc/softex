@@ -1,72 +1,73 @@
-algoritmo formandos 
+algoritmo resultadosVestibular 
 var
-	nome, turma: caractere;
-  nota, i, aprovados, aprovadosA,aprovadosB,aprovadosC,aprovadosD,: int
-  maiornota, maiornotaA, maiornotaB, maiornotaC, maiornotaD: int
+	nome, turma, primeiro: caractere;
+	i, aprovados, aprovadosA,aprovadosB,aprovadosC,aprovadosD,: int
+	nota, maiornota, maiornotaA, maiornotaB, maiornotaC, maiornotaD: float
  
 inicio
-aprovados<-0
-aprovadosA<-0
-aprovadosB<-0
-aprovadosC<-0
-aprovadosD<-0
-maiornota<-0
-maiornotaA<-0
-maiornotaB<-0
-maiornotaC<-0
-maiornotaD<-0
 
+	aprovados<-0
+	aprovadosA<-0
+	aprovadosB<-0
+	aprovadosC<-0
+	aprovadosD<-0
+	maiornota<-0
+	maiornotaA<-0
+	maiornotaB<-0
+	maiornotaC<-0
+	maiornotaD<-0
 
-i<-1
-enquanto i <=20 faca
-  escreval ("Informe o seu Nome Completo: ");
-  leia (nome);
-  escreval ("Informe a sua Turma (A, B, C ou D): ");
-  leia (turma);
-  escreval ("Informe o sua Nota no Vestibular: ");
-  leia (nota);
-  se (nota >= 7)
-    aprovados=aprovados+1;
-    se(nota>maiornota)
-      maironota<-nota;
-    fimse
-  fimse
-  se (nota >=7 && tuma == A)
-    aprovadosA=aprovadosA+1;
-    se(nota>maiornotaA)
-      maiornotaA<-nota;
-    fimse
-  fimse
-  se (nota >=7 && tuma == B)
-    aprovadosB=aprovadosB+1;
-    se(nota>maiornotaB)
-      maiornotaB<-nota;
-    fimse
-  fimse
-  se (nota >=7 && tuma == C)
-    aprovadosB=aprovadosB+1;
-    se(nota>maiornotaC)
-      maiornotaC<-nota;
-    fimse
-  fimse
-  se (nota >=7 && tuma ==D)
-    aprovadosD=aprovadosD+1;
-    se(nota>maiornotaD)
-      maiornotaD<-nota;
-    fimse
-  fimse
-  i<-i +1
-fimenquanto
+	i<-1
+	enquanto i <=20 faca
+	  escreval ("Informe o seu Nome Completo: ");
+	  leia (nome);
+	  escreval ("Informe a sua Turma (A, B, C ou D): ");
+	  leia (turma);
+	  escreval ("Informe o sua Nota no Vestibular: ");
+	  leia (nota);
+	  se (nota >= 7)
+	    aprovados=aprovados+1;
+	    se(nota>maiornota)
+	      maironota<-nota;
+	      primeiro<-nome;
+	    fimse
+	  fimse
+	  se (nota >=7 && tuma == A)
+	    aprovadosA=aprovadosA+1;
+	    se(nota>maiornotaA)
+	      maiornotaA<-nota;
+	    fimse
+	  fimse
+	  se (nota >=7 && tuma == B)
+	    aprovadosB=aprovadosB+1;
+	    se(nota>maiornotaB)
+	      maiornotaB<-nota;
+	    fimse
+	  fimse
+	  se (nota >=7 && tuma == C)
+	    aprovadosB=aprovadosB+1;
+	    se(nota>maiornotaC)
+	      maiornotaC<-nota;
+	    fimse
+	  fimse
+	  se (nota >=7 && tuma ==D)
+	    aprovadosD=aprovadosD+1;
+	    se(nota>maiornotaD)
+	      maiornotaD<-nota;
+	    fimse
+	  fimse
+	  i<-i +1
+	fimenquanto
 
-escreval(“Um total de ”, aprovados, "aunos foram aprovados no vestibular);
-escreval(aprovadosA, "alunos da turma A foram aprovados no vestibular);
-escreval(aprovadosB, "alunos da turma B foram aprovados no vestibular);
-escreval(aprovadosC, "alunos da turma C foram aprovados no vestibular);
-escreval(aprovadosD, "alunos da turma D foram aprovados no vestibular);
-escreval("A maior nota da turma A foi: ", maiornotaA);
-escreval("A maior nota da turma B foi: ", maiornotaB);
-escreval("A maior nota da turma C foi: ", maiornotaC);
-escreval("A maior nota da turma D foi: ", maiornotaD);
-escreval("A maior nota da escola foi: ", maiornota);
+	escreval(“Um total de ”, aprovados, "aunos foram aprovados no vestibular);
+	escreval(aprovadosA, "alunos da turma A foram aprovados no vestibular);
+	escreval(aprovadosB, "alunos da turma B foram aprovados no vestibular);
+	escreval(aprovadosC, "alunos da turma C foram aprovados no vestibular);
+	escreval(aprovadosD, "alunos da turma D foram aprovados no vestibular);
+	escreval("A maior nota da turma A foi: ", maiornotaA);
+	escreval("A maior nota da turma B foi: ", maiornotaB);
+	escreval("A maior nota da turma C foi: ", maiornotaC);
+	escreval("A maior nota da turma D foi: ", maiornotaD);
+	escreval("O aluno", primeiro, " obteve a maior nota da escola, total de: ", maiornota);
 
 fimalgoritmo
