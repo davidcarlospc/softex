@@ -1,21 +1,21 @@
-algoritmo resultadosVestibular 
+algoritmo resultadosVestibular
 var
 	nome, turma, primeiro: caractere;
-	i, aprovados, aprovadosA,aprovadosB,aprovadosC,aprovadosD,: int
-	nota, maiornota, maiornotaA, maiornotaB, maiornotaC, maiornotaD: float
+	i, aprovados, aprovadosA,aprovadosB,aprovadosC,aprovadosD: int;
+	nota, maiornota, maiornotaA, maiornotaB, maiornotaC, maiornotaD: float;
  
 inicio
 
-	aprovados<-0
-	aprovadosA<-0
-	aprovadosB<-0
-	aprovadosC<-0
-	aprovadosD<-0
-	maiornota<-0
-	maiornotaA<-0
-	maiornotaB<-0
-	maiornotaC<-0
-	maiornotaD<-0
+	aprovados<-0;
+	aprovadosA<-0;
+	aprovadosB<-0;
+	aprovadosC<-0;
+	aprovadosD<-0;
+	maiornota<-0;
+	maiornotaA<-0;
+	maiornotaB<-0;
+	maiornotaC<-0;
+	maiornotaD<-0;
 
 	i<-1
 	enquanto i <=20 faca
