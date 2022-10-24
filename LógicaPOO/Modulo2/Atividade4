@@ -6,7 +6,6 @@ print("2. Subtração")
 print("3. Multiplicação")
 print("4. Divisão")
 operacao = int(input("Informe a operação para realizar o cálculo: "))
-resultado = 0
 def calculadora(numero1, numero2, operacao):
      if (operacao == 1): 
       resultado = numero1 + numero2       
