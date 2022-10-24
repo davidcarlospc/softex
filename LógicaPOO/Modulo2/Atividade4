@@ -1,0 +1,22 @@
+numero1 = float(input("Informe o primeiro número: "))
+numero2 = float(input("Informe o segundo número: "))
+print("Considere as seguintes operações")
+print("1. Soma")
+print("2. Subtração")
+print("3. Multiplicação")
+print("4. Divisão")
+operacao = int(input("Informe a operação para realizar o cálculo: "))
+resultado = 0
+def calculadora(numero1, numero2, operacao):
+     if (operacao == 1): 
+      resultado = numero1 + numero2       
+     elif (operacao == 2): 
+       resultado = numero1 - numero2 
+     elif (operacao == 3): 
+       resultado = numero1 * numero2 
+     elif (operacao == 4): 
+       resultado = numero1 / numero2
+     else: resultado = 0
+     return resultado
+resultado = calculadora (numero1, numero2, operacao)
+print(resultado)
