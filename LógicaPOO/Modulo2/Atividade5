@@ -9,22 +9,29 @@ def calculadora(numero1, numero2, operacao):
        resultado = numero1 / numero2
      else: resultado = 0
      return resultado
-print("1. Soma")
-print("2. Subtração")
-print("3. Multiplicação")
-print("4. Divisão")
-print("0. Sair")
-operacao = int(input("Informe a operação para realizar o cálculo: "))
+operacao = 1
 while operacao != 0:
-  if operacao in range(1, 5):
-    numero1 = float(input("Informe o primeiro número: "))
-    numero2 = float(input("Informe o segundo número: "))
-    resultado = calculadora (numero1, numero2, operacao)
-    print(resultado)
+    print("Menu de opções:")
+    print("1. Soma")
+    print("2. Subtração")
+    print("3. Multiplicação")
+    print("4. Divisão")
+    print("0. Sair")
     operacao = int(input("Informe a operação para realizar o cálculo: "))
-  elif operacao == 0:
-    break
-  else:
-    print("Essa opção não existe")
-    break
-print("Saindo...")
+    if operacao >= 5:
+      print("####################################################################################")  
+      print("A operação escolhida (", operacao, ") não existe, escolha conforme as opções abaixo:")
+      print("####################################################################################")      
+      continue
+    elif operacao in range(1,5):
+      numero1 = float(input("Informe o primeiro número: "))
+      numero2 = float(input("Informe o segundo número: "))
+      resultado = calculadora (numero1, numero2, operacao)
+      print(resultado)    
+    elif operacao == 0:
+      break
+print("\n")
+print("Você escolheu a opção 0. Sair!")
+print("#################################################") 
+print("Obrigado por usar a nossa Calculadora, até breve!")
+print("#################################################") 
