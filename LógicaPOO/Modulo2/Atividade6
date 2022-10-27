@@ -1,0 +1,17 @@
+nome = input("Informe o seu nome completo")
+nascimento = 0
+while (nascimento < 1922) or (nascimento > 2021):
+  print ("Informe o seu ano de nascimento, com ano entre 1922 e 2021")
+  try:
+    nascimento = int(input())
+    if (nascimento < 1922):
+      print("\n")
+      print("**Ano anterior ao permitido, só será aceito ano de nascimento à partir de 1922**")
+    elif (nascimento > 2021):
+       print("\n")
+      print("Ano superior ao permitido, só será aceito ano de nascimento até 2021")
+  except:
+      print("\n")
+      print ("Ano de nascimento informado no formato incorreto, revise a informação e digite um valor numérico inteiro")
+idade = 2022 - nascimento
+print (nome,", no ano ano de 2022 você completou ou completará ",idade, "anos de idade")
