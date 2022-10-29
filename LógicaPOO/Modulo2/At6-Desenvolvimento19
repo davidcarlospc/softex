@@ -1,0 +1,62 @@
+import enum
+import time
+
+finalizar = "n"
+contX = 0
+contY = 0
+contZ = 0
+contB = 0
+while (finalizar != "s"):
+  print("Opções de voto:\n")
+  print("889 - Candidato_X")
+  print("847 - Candidato_Y")
+  print("515 - Candidato_Z")
+  print("0   - Voto em branco\n")
+  print("\nIniciar voto")
+  print("Digite o número do seu candidato:")
+  try:
+    voto = int(input())
+    if (voto == 889):
+      contX = contX + 1
+    elif (voto == 847):
+      contY = contY + 1
+    elif (voto == 515):
+      contZ = contZ + 1
+    else:
+      contB = contB + 1
+  except ValueError:
+      print("\n")
+      print("**Voto incorreto, por favor, informe um valor numérico**")
+  finally:
+    print("Voto registrado. Obrigado!\n")      
+    print("Deseja finalizar eleição e executar a apuração dos votos? (s/n)")
+    print("Digite s para finalizar ou n para continuar, depois pressione Enter para confirmar:")
+    finalizar = input()
+    while finalizar not in ("s","S","n","N"):
+      print ("insira uma das opções disponíveis (s/n)")
+      finalizar = input()
+print("Votação encerrada, calcultando resultado...")
+for i in range(0,5,1):
+  print(".")
+  time.sleep(1)
+maior = max (contX, contY, contZ)
+class Registro(enum.Enum):
+    Candidato_X = 889
+    Candidato_Y = 847
+    Candidato_Z= 515
+if maior == contX:    
+  dados_venc = Registro.Candidato_X
+if maior == contY: 
+  dados_venc = Registro.Candidato_Y
+if maior == contZ:     
+  dados_venc = Registro.Candidato_Z
+print("O candidato vencedor é:", dados_venc.name, "com", maior, "votos" )
+dadosX = Registro.Candidato_X
+dadosY = Registro.Candidato_Y
+dadosZ = Registro.Candidato_Z
+print("\nResumo da contagem de votos:")
+print("-"*30)
+print(dadosX.name,": ", contX, "votos")
+print(dadosY.name,": ", contY, "votos")
+print(dadosZ.name,": ", contZ, "votos")
+print("Brancos/Nulos: ", contB, "votos")
