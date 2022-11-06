@@ -1,0 +1,21 @@
+#importar arquivos via google colab com botão de upload do arquivo notas_alunos.csv
+
+from google.colab import files
+import io
+uploaded = files.upload()
+
+import pandas as pd
+df = pd.read_csv(io.BytesIO(uploaded['notas_alunos.csv']))
+
+media = (df["nota_1"] + df["nota_2"]) / 2
+df["media"] = media
+df.loc[df["media"] >= 7, "situacao"] = "APROVADO"
+df.loc[(df['faltas'] > 5) | (df['media'] < 7), "situacao"] = "REPROVADO"
+mais_faltas = df["faltas"].max()
+media_geral = df["media"].median()
+maior_media = df["media"].max()
+
+print(df)
+print("\nO maior número de faltas foi: "+str(mais_faltas))
+print("\nA média geral é: "+str(media_geral))
+print("\nA maior média é: "+str(maior_media))
