@@ -1,0 +1,16 @@
+#include <stdlib.h>
+#include <stdio.h>
+int main () {
+int *vetor;
+vetor = malloc (10 * sizeof (int));
+printf("Informe 10 números para alocar na memória. Digite o número e tecle enter para adicionar cada número: \n");
+for (int i = 0; i < 10; i++)
+   scanf ("%d", &vetor[i]);
+// simulando que precisamos de mais espaço
+vetor = realloc (vetor, 22 * sizeof (int));
+printf("Memória ajustada, informe mais 12 números : \n");
+for (int i = 10; i < 22; i++)
+   scanf ("%d", &vetor[i]);
+free (vetor);
+return 0;
+}
