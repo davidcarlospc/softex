@@ -6,7 +6,7 @@ def insertionSort(array):
 			array[j + 1] = array[j]
 			j = j - 1
 		array[j + 1] = key
-data = [9,5,1,7,3]
+data = [79,93,55,35,71,75,19,81,45,43,59,11,89,41,7,17,39,87,25,21,51,57,3,33,9,47,27,5,95,53]
 insertionSort(data)
 print('Array em ordem crescente:')
 print(data)
