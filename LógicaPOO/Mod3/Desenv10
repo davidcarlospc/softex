@@ -1,0 +1,44 @@
+import cmath 
+class Complexo:
+  def __init__(self):
+    self.c1=0
+    print ("O primeiro valor complexo é:", comp.c1)
+    print ("Parte real é:", int(comp.c1.real))
+    print ("Parte imaginária é:", int(comp.c1.imag))
+    self.c2=0
+    print ("O segundo valor complexo é:", comp.c2)
+    print ("Parte real é:", int(comp.c2.real))
+    print ("Parte imaginária é:", int(comp.c2.imag))
+  # funções(operações)
+  def soma(self):
+    return (self.c1+self.c2)
+  def sub(self):
+    return (self.c1-self.c2)
+  def mult(self):
+    return (self.c1*self.c2)
+  def div(self):
+    return (self.c1/self.c2)
+comp = Complexo()
+comp.c1 = complex(10,6)
+comp.c2 = complex(8,3)
+print("Escolha agora uma das operações para calcular o terceiro número complexo: ")
+print("1. Somar")
+print("2. Subtrair")
+print("3. Multiplicar")
+print("4. Dividir")
+opcao = int(input("Opção: "))
+if(opcao==1):
+  comp.soma()
+  op = "Soma"
+if(opcao==2):
+  comp.sub()
+  op = "Subtração"
+if(opcao==3):
+  comp.mult()
+  op = "Multiplicação"
+if(opcao==4):
+  comp.div() 
+  op = "Divisão"
+print ("O terceiro valor complexo é a" ,op,":", comp.soma())
+print ("Parte real é:", int(comp.soma().real))
+print ("Parte imaginária é:", int(comp.soma().imag))
