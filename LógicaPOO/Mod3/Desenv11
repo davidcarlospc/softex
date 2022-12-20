@@ -1,0 +1,11 @@
+INSTRUÇÕES DO PROJETO
+
+Pesquise sobre os grafos e apresente dois exemplos de como são utilizados no contexto tecnológico.
+
+RESPOSTA
+
+A teoria dos grafos, fundamentalmente matemática, tem sido utilizada para resolver diversos problemas, especialmente no contexto de tecnologia da informação. Ela estabelece uma estrutura onde pontos (vértices) estão interligados por linhas (arestas). A partir disso, algumas relações e propriedades entre um conjunto de pontos podem ser observadas e definidas.
+
+E um conjunto de páginas web, por exemplo. As páginas na internet, na maioria das vezes, não estão isoladas. Em geral, há a presencia de uma home page, que concentra vários hiperlinks que apontam e permitem alcançar outras páginas, estabelecendo assim estrutura hierárquica de árvores, com diversas ramificações. Tais páginas, podem ser modeladas como vértices e a conexão entre elas representam as arestas. Com base na teoria dos grafos, podem ser definidos, por exemplo, diferentes caminhos para se atingir uma determinada página, a partir da home. Pode-se determinar o caminho mais curto entre duas páginas, calcular a distância que cada página tem da home (ou de outra página qualquer), entre outras coisas, o que poderia ajudar a determinar, por exemplo, alguma caraterística relacionada a usabilidade de um site (ou conjunto de páginas).
+
+Outra aplicação seria em redes de topologia em malha (ou mesh), a exemplo temos aplicações para dispositivos em IoT. Em muitas situações em IoT, são utilizadas topologias de redes sem fio mesh. Elas são auto-organizáveis, nessa arquitetura, cada dispositivo (vértice) se conecta (estabelece aresta ou arestas) diretamente a outro (s) dispositivo (s), um grafo (não dirigido) entre esses pontos e relações vai sendo construído dinamicamente. Além dos cálculos básicos relacionados aos caminhos, relações e outras propriedades, tomando proveito da teoria, princípios de tolerância a falhas de conexão também podem ser assumidos. Isso acontece e pode ser um dos índices para medir a qualidade da comunicação em rede, quando um vértice tem vários caminhos (com várias arestas para cada nó) para se atingir um segundo ponto nessa rede. Em caso de falha em um caminho, outro caminho pode ser facilmente estabelecido.
