@@ -1,0 +1,20 @@
+class carro
+
+def __init__(self, fabricante, modelo, cor)
+    self.fabricante = fabricante
+    self.modelo = modelo
+    self.cor = cor
+
+def get_fabricante(self):
+    return self.fabricante
+
+def get_modelo(self):
+    return self.modelo
+
+def get_cor(self):
+    return self.cor
+
+carro = carro ('Toyota', 'Corolla', 'Prata')
+carro.get_fabricante()
+carro.get_modelo()
+carro.get_cor()
