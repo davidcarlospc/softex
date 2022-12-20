@@ -1,0 +1,62 @@
+ATIVIDADE:
+Classifique dois objetos materiais e dois abstratos. Insira, no mínimo, três métodos e três atributos para cada.
+
+RESPOSTA:
+
+OBJETOS MATERIAIS:
+
+Casa
+
+Atributos:
+cor: amarela
+área: 150 m2
+número: 502
+
+Métodos:
+TrancarPortas()
+LigarEnergia()
+LigarAgua()
+
+Carro
+
+Atributos
+fabricante: Toyota
+modelo: Corola
+cor: Prata
+motor: 1.6
+
+Métodos:
+Ligar()
+Acelerar()
+Freiar()
+Travar()
+
+
+OBJETOS ABSTRATOS:
+
+Formação:
+
+Atributos:
+nível: pós-graduação
+início: 01/03/2023
+fim: 30/11/2023
+
+Métodos:
+iniciar()
+concluirDisciplina()
+solicitarDiploma()
+
+Emprego
+
+Atributos
+dataInicio: 01/01/2010
+dataFim: 20/10/2012
+salário: 8000,00
+nível: Superior
+experiência: Senior
+
+Métodos:
+Iniciar()
+iniciarFerias()
+finalizar()
+
