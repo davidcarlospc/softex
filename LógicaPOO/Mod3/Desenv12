@@ -4,10 +4,10 @@ Lista2 = 15,6,18,3,7,16,20,4
 
 Lista1:
            45
-			20				60
-		7	  30				81
-	4		8				      97
-                      100
+       20     60
+      7	 30      81
+    4  8          97
+                   100
 
 Lista2:
 
@@ -19,10 +19,10 @@ Lista2:
 Adicionando o valor 3 na lista 1:
 
            45
-			20				60
-		7	  30				81
-	4		8				      97
-3                      100
+       20     60
+     7	 30      81
+   4  8           97
+ 3                  100
 
 Adicionando o valor 25 na Lista2:
 
@@ -34,11 +34,11 @@ Adicionando o valor 25 na Lista2:
 removendo valor 60 na lista 1:
 
            45
-			20				81
-		7	  30				97
-	4		8				      100
-3                      
-
+       20     81
+     7	 30     97
+   4  8          100
+ 3                
+  
 removendo valor 6 na lista 2:
 
             15
