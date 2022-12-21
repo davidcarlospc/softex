@@ -1,0 +1,19 @@
+import java.io.Serializable;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
+public class Matricula{
+
+    FileOutputStream = new FileOutputStream("c:\Matriculas.xls");
+    ObjectOutputStream = new ObjectOutputStream("Matriculas.xls");
+    Matricula.writeObject("Matriculas.xls");
+    Matricula.close();
+
+public class ReadObject{
+
+     FileInputStream "Matricula.xls"  = new FileInputStream("c:\Matricula.xls");
+     ObjectInputStream "Matricula.xls" = new ObjectInputStream("Matricula.xls");
+     Matricula = ("Matricula.xls") "Matricula.xls".readObject();
+     Matricula.close();
