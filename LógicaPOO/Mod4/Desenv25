@@ -1,0 +1,8 @@
+texto = 'CURSO de programação BACK-end'
+print(texto.capitalize())
+
+texto = 'softex recife'
+print(texto.upper()) 
+
+texto = 'EXEMPLO de Codigo'
+print(texto.lower()) 
