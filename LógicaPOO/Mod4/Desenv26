@@ -13,7 +13,7 @@ public class Matricula{
 
 public class ReadObject{
 
-     FileInputStream "Matricula.xls"  = new FileInputStream("c:\Matricula.xls");
-     ObjectInputStream "Matricula.xls" = new ObjectInputStream("Matricula.xls");
-     Matricula = ("Matricula.xls") "Matricula.xls".readObject();
+     FileInputStream "Matriculas.xls"  = new FileInputStream("c:\Matriculas.xls");
+     ObjectInputStream "Matriculas.xls" = new ObjectInputStream("Matriculas.xls");
+     Matricula = ("Matriculas.xls") "Matriculas.xls".readObject();
      Matricula.close();
