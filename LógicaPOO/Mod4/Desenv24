@@ -1,0 +1,15 @@
+package rh;
+public class funcionarios extends funcionarios
+{
+  public string estagiario;
+  public string assistente;
+  public string analista;
+}
+
+package vendas;
+public class produto extends produto
+{
+  public string consultoria;
+  public string implantacao;
+  public int preco;
+}
