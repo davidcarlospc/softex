@@ -1,0 +1,23 @@
+class carro
+
+public string fabricante
+public string modelo
+private string cor
+
+public string getfabricante()
+public setfabricante()
+    return fabricante
+
+public string getmodelo()
+public setmodelo()
+    return modelo
+
+public string getcor()
+public setcor()
+    return cor
+
+metodo contruct
+partida()
+ligar = 'now'
+
+endmetodo
