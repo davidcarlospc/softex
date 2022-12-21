@@ -1,0 +1,15 @@
+ATIVIDADE:
+Escolha e descreva um padrão de projetos.
+
+RESPOSTA:
+Padrão criacional (Creational pattern):
+
+Os padrões "criacionais" são criados para abstrair processos comuns de criação de objetos, ação também conhecida como instanciação. O padrão criacional estrutura a forma de criação de objetos, eliminando problemas conhecidos e mantendo o controle dessa criação. Existem padrões para criação de classes e padrões para criação de objetos. O padrão aumenta a flexibilidade e reutilização de código já existente, os principais padrões são:
+
+Abstract Factory: para produzir famílias de objetos relacionados sem ter que especificar suas classes concretas.
+Builder: para construir objetos complexos passo a passo. O padrão permite que você produza diferentes tipos e representações de um objeto.
+Factory Method: para a criação de objetos em uma superclasse, permitindo que as subclasses alterem o tipo de objetos que serão criados.
+Prototype: para copiar (clonar) objetos existentes sem fazer seu código ficar dependente de suas classes.
+Singleton: garante que uma classe tenha apenas uma instância e fornece um ponto global de acesso a ela.
+
+
