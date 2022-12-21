@@ -1,0 +1,12 @@
+public class Inteiro {
+    int a;
+
+    try {   
+      System.out.println("Exemplo de exceção, assumindo número inteiro: ");
+      a = 22.66;
+    } 
+    catch(InputMismatchException e){
+        System.out.println("número inválido, é necessário passar um número inteiro.");
+    }
+    System.out.println("Erro.");
+ }
