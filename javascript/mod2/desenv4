@@ -1,0 +1,11 @@
+INSTRUÇÕES:
+
+Pesquise sobre padrões de projeto e escolha um para apresentar e descrever o seu funcionamento. Além disso, explique quais as vantagens e desvantagens comparados a outros e mostre suas referências.
+
+RESPOSTA:
+
+Segundo Christopher Alexandre (Oxford University Press, 1979): “Cada padrão é uma regra de três partes, que expressa uma relação entre um certo contexto, um problema e uma solução”. Pode-se entender então que um padrão de projeto seria a solução recorrente para um problema em um contexto, mesmo que em projetos e áreas distintas. Um contexto diz respeito ao ambiente. O problema é algo que precisa ser investigado e solucionado. E a solução refere-se à resposta ao problema.
+
+Os padrões "criacionais" são criados para abstrair processos comuns de criação de objetos, ação também conhecida como instanciação. O padrão criacional estrutura a forma de criação de objetos, eliminando problemas conhecidos e mantendo o controle dessa criação. Existem padrões para criação de classes e padrões para criação de objetos. O padrão aumenta a flexibilidade e reutilização de código já existente.
+
+Como exemplo temos o Builder: que serve para construir objetos complexos passo a passo. O padrão permite que você produza diferentes tipos e representações de um objeto.
