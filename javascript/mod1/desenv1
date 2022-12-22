@@ -1,0 +1,58 @@
+Instruções da atividade:
+
+Acessar pelo menos dois sites de sua preferência e os inspecione com o botão direito do mouse na página web.
+Com o código fonte aberto: 
+
+Verificar no código algum elemento que utilize JavaScript; 
+Marcar alguns elementos do site; 
+Explicar como ele se comporta. Exemplo: entrar no site do Google, inspecionar o botão de pesquisa, verificar o código e explicar qual a finalidade do botão. 
+
+Resposta:
+
+1- No site do Cesar School, podemos encontrar o segiunte script
+
+<script type="text/javascript" wfd-invisible="true">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+
+Esse script serve para ocultar alguns trechos da estrutura do wordpress, nesse caso relacionado ao plugin de e-commerce.
+
+2 - No site da prefeitura do Recife (abaixo), há um código (javascript) para controlar um banner no início da página que controla a exibição de slides.
+
+<script type="text/javascript">
+        (function ($) {
+            $(document).ready(function() {
+
+                    $('.iosSlider').iosSlider({
+                            scrollbar: true,
+                            snapToChildren: true,
+                            desktopClickDrag: true,
+                            infiniteSlider: true, 
+                            autoSlideTransTimer: 2000,
+                            autoSlideHoverPause: true,
+                            navSlideSelector: $('.iosSliderButtons .button'),
+                            scrollbarHeight: '2px',
+                            scrollbarBorderRadius: '0',
+                            scrollbarOpacity: '0.5',
+                            navPrevSelector: $('.prevButton'),
+                            navNextSelector: $('.nextButton'),
+                            onSlideChange: slideContentChange,
+                            onSliderLoaded: slideContentChange,
+                            keyboardControls: true,
+                            autoSlide: true
+                    });
+
+                    function slideContentChange(args) {
+                            /* indicator */
+                            $('.iosSliderButtons .button').removeClass('selected');
+                            $('.iosSliderButtons .button:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
+
+                    }
+
+            });
+        })(jQuery);
+    </script>
