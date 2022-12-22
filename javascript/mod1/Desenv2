@@ -1,0 +1,13 @@
+Instruções da atividade:
+
+Com ajuda da leitura complementar, você deve configurar o seu ambiente de desenvolvimento JavaScript. Esse ambiente pode ser uma IDE ou um editor de código-fonte. Para isso, você deve levar em consideração alguns pontos: 
+
+O seu ambiente precisa programar na linguagem JavaScript; 
+Se necessário, configure seu ambiente; 
+Deixe ele pronto para uso, ou seja, sem mais configurações. 
+
+Escreva, no mínimo, um parágrafo mostrando seu ambiente configurado, explique sua escolha.
+
+Resposta:
+
+Foi escolhida a ferramenta de edição de código Visual Studio Code, em geral pela sua flexibilidade. Ele pode ser compatível com diferentes linguagens de programação, além da possibilidade de estender suas funcionalidades por meio da instalação de plugins para inúmeras finalidades. É compátivel com comandos git e permite conectar ao github. Já utilizei antes e é fácil de usar, configurar e encontrar ajuda na sua documentação. O VScode permite o gerenciamento visual dos projetos e é totalmente compatível com o Sistema Operacional Windows. Adicionalmente, pode ser utilizada a ferramenta online, codepen.io, pela facilidade e o fato de pode acessar em qualquer lugar.
