@@ -1,0 +1,14 @@
+var n1 = prompt("Informe sua primeira nota: ");
+var n2 = prompt("Informe sua segunda nota: ");
+var n3 = prompt("Informe sua terceira nota: ");
+
+var media = (n1+n2+n3)/3
+
+situacao = (media>=7) ? "APROVADO": "REPROVADO"
+console.log(situacao)
+
+var n1 = prompt("Informe sua primeira nota: ");
+var n2 = prompt("Informe sua segunda nota: ");
+console.log("A nota que voce precisa para passar por média é: ");
+var passar = 7-((nota1 + nota2)/2)
+console.log(passar)
