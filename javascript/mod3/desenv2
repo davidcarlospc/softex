@@ -12,5 +12,5 @@ function soma(num1, num2) {
 
 resultado = situacao()
 console.log(situacao)
-total = soma(num1, num2)
+soma = soma(num1, num2)
 console.log(soma)
