@@ -1,0 +1,18 @@
+n1 = int(input("Informe o primeiro numero: "))
+n2 = int(input("Informe o segundo numero: "))
+op = input("Qual operação deseja realizar entre eles, informe um dos símbolos: + , - , * , / ")
+if op == "+":
+    result = n1 + n2
+    print(result)
+elif op == "-":
+    result = n1 - n2
+    print(result)
+elif op == "*":
+    result = n1 * n2
+    print(result)
+elif op == "/":
+    result = n1 / n2
+    resto = n1 % n2
+    print("Resultado:",result, "Resto da divisão:",resto)
+else:
+    print("Erro, revise e informe a opção correta")
