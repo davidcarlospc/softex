@@ -1,0 +1,64 @@
+abstract class pc {
+    constructor(
+        protected _ram:number,
+        protected _hdd:number,
+        protected _cpu:number,
+        protected _type:string
+    ) {}
+    get ram (){return this._ram};
+    get hdd (){return this._hdd};
+    get cpu (){return this._cpu};
+    get type (){return this._type};
+
+    static factory(){}
+
+    toString(){}
+}
+class Pc extends pc{
+    constructor(
+        protected _ram:number,
+        protected _hdd:number,
+        protected _cpu:number,
+        protected _type:string
+    ){
+        super(_ram,_hdd,_cpu,_type);
+    }
+    get ram (){return this._ram};
+    get hdd (){return this._hdd};
+    get cpu (){return this._cpu};
+    get type (){return this._type};
+    
+    static factory(){
+        return new Pc(512,64,16,'PC')
+    }    
+    toString(){
+        console.log('RAM:'+this._ram);
+        console.log('HDD'+this._hdd);
+        console.log('CPU:'+this._cpu + 'GHz');
+        console.log('Tipo:'+this._type);
+    }
+}
+class Server extends pc{
+    constructor(
+        protected _ram:number,
+        protected _hdd:number,
+        protected _cpu:number,
+        protected _type:string
+    ){
+        super(_ram,_hdd,_cpu,_type);
+    }
+    get ram (){return this._ram};
+    get hdd (){return this._hdd};
+    get cpu (){return this._cpu};
+    get type (){return this._type};
+
+    static factory(){
+        return new Server(300,32,8,'Notebook')
+    }
+    toString(){
+        console.log('RAM:'+this._ram);
+        console.log('HDD'+this._hdd);
+        console.log('CPU:'+this._cpu + 'GHz');
+        console.log('Tipo:'+this._type);
+    }
+}
