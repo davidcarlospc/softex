@@ -1,0 +1,19 @@
+const curriculo = {
+    nome: 'David',
+    idade: 42,
+    nacionalidade: 'brasileira',
+    Formacao: [medio, tecnico, bacharelado, especializacao, mestrado]
+}    
+function checkStatus() {
+    for(const status in curriculo) {
+        console.log(`${status}: ${curriculo[status]}`)
+    }
+    console.log()
+}
+
+function checkFormacao() {
+    console.log('Formacao: ')
+    for (const check of curriculo.formacao) {
+        console.log(check)
+    }
+}
