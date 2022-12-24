@@ -1,0 +1,40 @@
+/*
+Crie um adaptador que permita que um objeto do tipo Pato seja usado como se fosse um objeto do tipo Galinha.
+Siga o exemplo apresentado no Hipertexto 4 e crie as classes AdaptadorPato e AdaptadorPatoDemo para demonstrar o uso da classe AdaptadorPato.
+*/
+
+interface Pato{
+    fazerQuaqua()
+    voar()
+}
+interface Galinha{
+    fazerCocorico()
+    ciscar()
+}
+class PatoAdaptado implements Pato{
+    constructor(protected adaptador: GalinhaComum){}    
+    fazerQuaQua() {
+        return this.adaptador.fazerCocorico()
+    }
+    voar() {
+        return this.adaptador.ciscar()
+    }
+}
+class GalinhaComum implements Galinha{
+    fazerCocorico() {
+        return 'Có-Có-Ri-Có'
+    }
+    ciscar() {
+        return 'Ciscando...'
+    }
+}    
+console.log('Galinha Comum');
+const ave1 = new GalinhaComum()
+console.log(ave1.fazerCocorico());
+console.log(ave1.ciscar())
+console.log('\n');
+
+console.log('Pato Adaptado');
+const patoCisca = new PatoAdaptado(ave1)
+console.log(patoCisca.fazerQuaQua())
+console.log(patoCisca.voar());
