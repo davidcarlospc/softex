@@ -1,0 +1,47 @@
+/*
+Considerando a solução apresentada no Hipertexto 5, aplique o padrão de projeto Strategy para criar uma simples calculadora. Os requisitos para avaliar o projeto são:
+- implementar uma interface Strategy com o método abstrato execute(). Deve haver três classes concretas que implementam a Strategy para realizar as operações de Soma, Subtração e Multiplicação de números inteiros;
+- o método execute() deve receber dois números inteiros como parâmetros e retornar o resultado também como número inteiro;
+- como input do usuário, a aplicação deve receber o primeiro valor, depois o segundo e, por último, a operação matemática que deve realizar;
+- no final, a aplicação deve definir qual Strategy será usada, com base na operação informada, e imprimir o resultado da operação.
+*/
+
+var readlinesync = require('readline-sync')
+
+interface Strategy {
+    execute(x, y)
+}
+class Soma implements Strategy {
+    public execute(x, y) {
+       return parseInt(x.toString()) + parseFloat(y.toString())
+    }
+}
+class Subtracao implements Strategy {
+    public execute(x, y) {
+        return x - y
+    }
+}
+class Multiplicacao implements Strategy {
+    public execute(x, y) {
+        return x * y
+    }
+}
+class Calculadora {
+    calcular(operacao: Strategy) {
+        return operacao.execute(n1, n2)
+    }
+}
+let n1 = readlinesync.question('Informe o Primeiro número: \n')
+let n2 = readlinesync.question('Informe o Segundo número: \n')
+let op = readlinesync.question('Informe o sinal que indica a operação a realizar com os números: +, - ou x: \n')
+
+const executar = new Calculadora()
+if (op == '+') {
+    console.log(`${n1} + ${n2} = ${executar.calcular(new Soma())}`)
+} else if (op == '-') {
+    console.log(`${n1} - ${n2} = ${executar.calcular(new Subtracao())}`)
+} else if (op == 'x') {
+    console.log(`${n1} x ${n2} = ${executar.calcular(new Multiplicacao())}`)
+} else {
+    throw Error('Erro - Você informou uma sinal inválido para uma operação desta calculadora')
+}
