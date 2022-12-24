@@ -1,4 +1,4 @@
-abstract class pc {
+abstract class computer {
     constructor(
         protected _ram:number,
         protected _hdd:number,
@@ -11,10 +11,9 @@ abstract class pc {
     get type (){return this._type};
 
     static factory(){}
-
     toString(){}
 }
-class Pc extends pc{
+class pc extends computer{
     constructor(
         protected _ram:number,
         protected _hdd:number,
@@ -29,16 +28,16 @@ class Pc extends pc{
     get type (){return this._type};
     
     static factory(){
-        return new Pc(512,64,16,'PC')
+        return new pc(16,500,2000,'Desktop')
     }    
     toString(){
-        console.log('RAM:'+this._ram);
-        console.log('HDD'+this._hdd);
+        console.log('RAM:'+this._ram + 'GB');
+        console.log('HDD'+this._hdd + 'GB');
         console.log('CPU:'+this._cpu + 'GHz');
         console.log('Tipo:'+this._type);
     }
 }
-class Server extends pc{
+class Server extends computer{
     constructor(
         protected _ram:number,
         protected _hdd:number,
@@ -53,11 +52,11 @@ class Server extends pc{
     get type (){return this._type};
 
     static factory(){
-        return new Server(300,32,8,'Notebook')
+        return new Server(64,4000,2800,'Storage')
     }
     toString(){
-        console.log('RAM:'+this._ram);
-        console.log('HDD'+this._hdd);
+        console.log('RAM:'+this._ram + 'GB');
+        console.log('HDD'+this._hdd + 'GB');
         console.log('CPU:'+this._cpu + 'GHz');
         console.log('Tipo:'+this._type);
     }
