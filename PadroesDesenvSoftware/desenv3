@@ -1,0 +1,65 @@
+/*
+Aplique o padrão de projeto decorator para criar um sanduíche de frango assado com pepperoni e queijo mussarela ralado. O projeto deve seguir os seguintes critérios:
+- deve imprimir no console: Sanduíche de Carne, Bacon, QueijoMussarelaRalado custa $7,49.
+- o sanduíche de frango assado custa $4,50.
+- o ingrediente adicional pepperoni custa $0,99.
+- o ingrediente adicional queijo mussarela ralado custa $2,00.
+- crie as classes necessárias: FrangoAssado, Pepperoni e QueijoMussarelaRalado.
+*/
+
+interface Sanduiche{
+    getInfo()
+    getValor()
+}
+
+class SandFrangoassado implements Sanduiche{
+    private info = 'Sanduíche de Frango Assado'
+    private valor = 4.50 
+    
+    getInfo() {
+        return this.info
+    }
+    
+    getValor() {
+        return this.valor
+    }
+}
+
+class AdicionalDecorator implements Sanduiche{
+    constructor(protected lanche: Sanduiche){}
+        
+    getInfo() {
+        return this.lanche.getInfo()
+    }
+    getValor() {
+        return this.lanche.getValor()
+    }
+}    
+
+
+class Pepperoni extends AdicionalDecorator{
+    
+    getInfo(){
+        return this.lanche.getInfo() + ', Pepperoni'
+    }
+
+    getValor():number{
+        return this.lanche.getValor() + 0.99
+    }
+}
+
+class MussarelaRalada extends AdicionalDecorator{
+    
+    getInfo() {
+        return this.lanche.getInfo() + ', Queijo mussarela ralado'
+    }
+
+    getValor(): number {
+        return this.lanche.getValor() + 2.00
+    }
+}
+
+const pedido1 = new SandFrangoassado()
+const pedido2 = new Pepperoni(pedido1)
+const pedido3 = new MussarelaRalada(pedido2)
+    console.log(`Total do pedido: ${pedido3.getInfo()}, Custa: $${pedido3.getValor()}`);
