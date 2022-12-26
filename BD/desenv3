@@ -11,4 +11,4 @@ Segunda Forma Normal (2FN): tem que estar, obrigatoriamente, na 1FN (não deve t
 
 Terceira Forma Normal (3FN): tem que estar, obrigatoriamente, na 2FN e possuir dependência exclusiva da chave primária da tabela. Todos os seus atributos  devem ser funcionalmente independentes. Sendo assim, na 3FN, os dados: devem estar na 2FN; Os atributos não podem depender de outros que não são chaves.
 
-Forma Normal Boyce-Codd (FNBC):
+Forma Normal Boyce-Codd (FNBC): tem que estar na 3FN. É uma melhoria da 3FN e é utilizada nos casos onde a tabela apresentar mais de uma chave candidata. a FNBC serve para separar, em novas tabelas, valores que ainda estejam redundantes no banco de dados
