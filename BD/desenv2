@@ -1,0 +1,11 @@
+ATIVIDADE:
+O desenvolvimento de um projeto de banco de dados passa por fases que são de grande importância para sua implementação. Descreva as etapas desse processo.
+
+RESPOSTA:
+Análise de requisitos: Etapa inicial e fundamental no projeto, é necessário entender a necessidade para concepção geral do sistema, é fase de entendimento da regra de negócio (faz-se uso de entrevistas, formulários e reuniões com o cliente), com o objetivo de desenvolver um minimundo, que é capaz de documentando/descrever o projeto.
+
+Modelo Conceitual: Baseia-se nos dados coletados na análise de requisitos. É gerada uma representação gráfica de alto nível chamada de Modelo Entidade-Relacionamento (MER), em que são definidos os atores, no contexto do banco de dados, e as relações e restrições entre eles. Normalmente, para essa representação utiliza-se a linguagem UML e seus diagramas. É a fase na qual as regras de negócio identificadas, começam a ser introduzidas. Este modelo facilita a compressão do usuário final ou cliente.
+
+Modelo Lógico: Adequa o modelo conceitual às necessidades de utilização do banco de dados pelos usuários e aplicações. O modelo lógico é uma descrição da estrutura do banco de dados que pode ser processada por um SGBD (não é específica por SGBD). Cada entidade torna-se uma tabela que vai armazenar informações em campos. É necessário tomar definições como as dos tipos de dados, tamanho dos campos, além da criação das chaves primárias e estrangeiras (que viabilizarão os relacionamentos). 
+
+Modelo Físico: Baseia-se no modelo lógico e é específico para cada SGBD (melhores práticas de cada software). Com o banco já praticamente definido, essa fase trata da criação do banco e detalhes da sua implementação pelo SGBD. São definidos aqui as formas de armazenamento e são gerados scripts para criação das tabelas e visões do banco, utiliza-se a linguagem SQL.
