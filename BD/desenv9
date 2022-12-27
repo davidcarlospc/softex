@@ -4,7 +4,7 @@ Uma empresa precisa criar um relatório que faça um levantamento diário da qua
 RESPOSTA:
 
 create database compras_corp;
-create table compras(ID int(4) not null auto_increment, PRODUTO varchar (50) not null, VALOR decimal (8,2), QTDE int (4), DATA date, primary key (ID));
+create table compras(ID int(4) not null auto_increment, PRODUTO varchar (50) not null, DESCRICAO varchar (250), VALOR decimal (8,2), QTDE int (4), DATA date, primary key (ID));
 
 create procedure compra_diaria (data_compra date)
-select PRODUTO, QTDE, DATA from compras where data = data_compra;
+select PRODUTO, QTDE from compras where data = data_compra;
