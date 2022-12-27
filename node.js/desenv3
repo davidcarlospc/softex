@@ -1,0 +1,24 @@
+//ATIVIDADE:
+//Usando o Express, crie um código Node.JS, que deve receber requisições HTTP GET e POST. Depois, coloque o servidor para rodar na porta 8080.
+
+//RESPOSTA:
+
+const express = require("express");
+const bodyParser = require("body-parser");
+const router = express.Router();
+const app = express();
+
+app.listen(8080, () => {
+    console.log("Servidor iniciado na porta 8080");
+})
+app.get('/', (req, res) => {
+    res.send("Olá Express")
+})
+router.post('/login', function (req, res) {
+    var usuario = req.body.user;
+    var senha = req.body.password;
+    console.log("Nome de usuário = " + user_name + ", senha é " + password);
+    res.end("yes");
+});
+
+// salvar o arquivo como express.js e no terminal rodar o comando node express.js
