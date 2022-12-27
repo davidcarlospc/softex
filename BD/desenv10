@@ -1,0 +1,13 @@
+ATIVIDADE:
+Crie uma função que some todos os clientes cadastrados em uma loja durante um dia.
+
+RESPOSTA:
+
+create database loja;
+use loja;
+
+create table clientes(ID int(3) auto_increment not null, NOME varchar(30) not null, NASCIMENTO date, CADASTRO date, primary key (id));
+
+create FUNCTION clientes_diario (data_cadastro date)
+returns int 
+return (select count(ID) from clientes where CADASTRO = data_cadastro));
