@@ -1,0 +1,32 @@
+//ATIVIDADE:
+//Sem usar bibliotecas, crie um projeto simples em Node.js que seja capaz de responder requisições HTTP. Explique como rodar e testar.
+
+//RESPOSTA:
+
+//inicialmente, via terminal local, é criada a pasta para o projeto e o arquivo para o código javascript (iniciando a edição com vs code)
+mkdir projeto
+cd projeto
+code servidor.js
+
+// O código do servidor incia a seguir, inicialmente, é necessário carregar o módulo http, já presente no node.js:
+const http = require("http");
+
+//são criadas constantes para armazenar os valores da porta e do endereço do host, neste último será utilizado um endereço especial que aponta para o próprio computador local:
+const port = 8080;
+const host = 'localhost';
+
+// é adicionada uma função especial do node.js, requestListener, capaz de processar uma solicitação HTTP de entrada e retornar uma resposta HTTP. O servidor retornará uma mensagem quando for acessado:
+const requestListener = function (req, res) {
+    res.writeHead(200);
+    res.end("Servidor HTTP - OK");
+};
+// finalmente, o servidor pe criado e exibe na console uma mensagem de confirmação:
+const server = http.createServer(requestListener);
+server.listen(port, host, () => {
+    console.log(`Server is running on http://${host}:${port}`);
+});
+
+//depois de salvar o arquivo server.js, o código deve ser executado no terminal local:
+node server.js
+
+// ao acessar no navegador, o endereço http://localhost:8080 veremos a nossa página com a mensagem de confirmação 
