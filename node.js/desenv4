@@ -1,0 +1,32 @@
+//ATIVIDADE:
+//Crie um pequeno servidor web que contenha várias rotas.
+Em cada rota, você deverá fazer o controle do fluxo de requisições de maneira estática ou dinâmica, alterne entre essas formas usando placeholders e query.
+
+//RESPOSTA:
+
+const express = require('express');
+const app = express();
+
+app.get('/home', function(req, res) {
+    res.send('Home')
+})
+app.get('/sobre', function(req, res) {
+    res.send('Sobre')
+})
+app.get('/login', function(req, res) {
+    res.redirect ('/home') 
+})
+app.get('/publicacoes/:id', function(req, res) {
+    const id = req.params.id
+    res.send('id recebido ${id}')
+})
+app.get('/time', function(req, res) {
+    const nome = req.query.nome 
+    res.json({nome})
+})
+app.get('/loja', function(req, res) {
+    res.sendStatus(404)
+})
+app.listen(8080, () => {
+    console.log('Servidor ATIVO na porta 8080')
+})
