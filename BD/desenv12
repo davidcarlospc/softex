@@ -1,0 +1,8 @@
+ATIVIDADE:
+Uma empresa está sofrendo ataques que impactam diretamente a sua segurança. Então, ela precisa atualizar as senhas de todos os seus funcionários. Cite pelo menos três métodos para melhorar essas senhas.
+
+RESPOSTA:
+
+Do lado do usuário, aumentar os requisitos de complexidade das senhas, com o objetivo de evitar senhas fáceis de adivinhar. Sendo assim, os funcionários deve atualizar suas senhas e o sistema deve exigir: não utilização de caracteres repetidos; mínimo de 8 caracteres; conter pelo menos uma letra minúscula, 1 minúscula e 1 caractere especial; tamanho máximo de 64 caracteres; não utilização de dados pessoais constantes no seu cadastro, ou parte deles; não permitir reutilização das últimas 5 senhas em caso de troca; troca da senha a cada 1 ano, além disso habilitar outras técnicas de autenticação, como o multifator(MFA), onde além de uma senha forte é necessário ter um elemento adicional para acessar (como biometria, celular, token, etc.).
+
+Do lado do banco de dados, além de garantir a validação dos requisitos de usuário, pode-se optar por habilitar mecanismos para criptografar as senhas; habilitar a troca das senhas de acesso privilegiado (admin) a cada 6 meses; para todas as operações no banco de dados, as senhas não devem ser passadas como parâmetro em texto limpo. Uma solução também bastante utilizada para armazenamento criptografado de senhas, no âmbito corporativo, é a integração com soluções de cofre de senhas.
