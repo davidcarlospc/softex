@@ -1,0 +1,10 @@
+ATIVIDADE:
+Após uma varredura rápida no sistema da sua empresa, foi identificada a necessidade de melhorar a segurança dos dados. Por isso, você deve desenvolver um novo banco de dados. Explique quais são os pilares da segurança de dados que devem ser seguidos.
+
+RESPOSTA:
+
+Integridade: princípio que visa garantir que os dados mantenham as suas características originais de criação e controle de mudanças em todo o seu ciclo de vida. Aqui podem ser utilizadas técnicas como as de funções hash, criptografia, restrições de integridade em bancos de dados.
+
+Disponibilidade: princípio de segurança da informação para garantir que os dados estejam sempre disponíveis para uso autorizado e legítimo. Para aumentar a disponibilidade, são utilizadas técnicas de HA (high availability), que incluem soluções para bancos de dados redundantes, ou balanceamento de carga.
+
+Confidencialidade: garante restrição de acesso aos dados somente à usuários legítimos, autorizados pelo proprietário. Significa também proteger os dados trocados entre um emissor e um destinatário. Utilizam-se aqui técnicas de criptografia, autenticação e controle de acesso.
