@@ -1,1 +1,9 @@
-...
+ATIVIDADE:
+Com base nos vídeos 1 e 2, explique como a web funciona a partir do ponto de vista do protocolo cliente servidor. Crie o começo de um projeto em node.js, usando o npm e informe os comandos utilizados.
+
+RESPOSTA:
+O modelo cliente-servidor é o mais utilizado no contexto das aplicações web, é uma estrutura que distribui tarefas e cargas de trabalho entre computadores que assumem funções distintas, de provedor de serviço (servidor), ou de solicitante/usuário dos serviços (cliente). Clientes e servidores se comunicam entre si e conectam-se à web por meio de uma rede de computadores. Um servidor pode executar vários serviços com objetivos distintos.
+
+Uma arquitetura cliente-servidor está estabelecida quando existe um servidor fornecendo serviços (como páginas da web, portais e aplicativos) e disponibilizando-os na web, e um usuário realiza uma solicitação por meio de um navegador web (como Google Chrome, Safari ou Firefox), que podem ser acessados em um dispositivo como um celular, um notebook ou desktop, uma TV inteligente, etc. (tais dispositivos estão conectados à internet por meio de wifi, fibra ótica, ou rede móvel, por exemplo).
+
+Quando o solicitante digita o nome de página na barra de endereços do navegador, por exemplo, é realizada uma requisição HTTP para o servidor (onde a página está armazenada), que interpreta a solicitação, verifica se a página existe e está disponível para visualização (código de mensagem HTTP 200 - OK), e então envia pela internet (com o conteúdo encapsulado em pacotes no padrão TCP/IP) uma cópia da página solicitada. A página é baixada no computador do cliente, interpretada e o seu conteúdo é exibido em tela.
