@@ -11,18 +11,38 @@ De acordo com os conceitos estudados, exiba os resultados das consultas das oper
 - Exiba o resultado da diferença entre a tabela ALUNO(PNome, UNome) e a tabela PROFESSOR. 
 
 RESPOSTA:
-select * from aluno where nota > 7;
+
+select * from aluno where nota >= 7;
+
+p.nome      u.nome      matricula   serie       disciplina      nota
+Vitória     Claudino    5542        2º ano      Matemática      7,0
+Luiz        Silva       6215        1º ano      Português       8,0
+André       Carvalho    4521        3º ano      Matemática      9,5
+Alan        Vilela      3285        1º ano      História        8,0 
+Figueiredo  Santos      4598        2º ano      Geografia       9,0
 - 
-select * from aluno where serie = "1A" and nota >= 8;
+select * from aluno where serie = "1º ano" and nota >= 8;
+
+p.nome      u.nome      matricula   serie       disciplina      nota
+Luiz        Silva       6215        1º ano      Português       8,0
+Alan        Vilela      3285        1º ano      História        8,0 
 - 
-select nome, nota from aluno;
+select p.nome, u.nome nota from aluno;
+
+p.nome      u.nome      nota
+Vitória     Claudino    7,0
+Luiz        Silva       8,0
+André       Carvalho    9,5
+Alan        Vilela      8,0
+Figueiredo  Santos      9,0
+
 - 
-create table professor (PNome varchar(20), UNome varchar(20));
+create table professor (p.nome varchar(20), u.nome varchar(20));
 - 
-create table aluno (PNome varchar(20), UNome varchar(20));
+create table aluno (p.nome varchar(20), u.nome varchar(20));
 -
-select PNome, UNome from aluno union select * from professor;
+select p.nome, u.nome from aluno union select * from professor;
 -
-select PNome, UNome from aluno intersect select * from professor;
+select p.nome, u.nome from aluno intersect select * from professor;
 -
-select PNome, UNome from aluno except select * from professor;
+select p.nome, u.nome from aluno except select * from professor;
