@@ -1,0 +1,15 @@
+ATIVIDADE:
+Você deve criar uma tabela para executar uma trigger que relacione algum comando, como: 
+insert, select, delete ou update.
+
+RESPOSTA:
+
+create database acervo;
+use acervo;
+
+create table livros (ID int not null auto_increment, NOME varchar(50), ANO varchar(4), AUTOR varchar(25), primary key (ID));
+
+create trigger info_cadastro before insert on livros after each row
+begin
+select * from livros;
+end
