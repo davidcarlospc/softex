@@ -1,0 +1,18 @@
+ATIVIDADE:
+Desenvolva um banco de dados que relacione tabelas através de chaves estrangeiras ou nomes de colunas iguais. Após isso, realize todos os comandos Joins estudados.
+
+RESPOSTA:
+
+create database CADASTRO;
+
+create table usuarios(id int (4) auto_increment not null, nome varchar (25) not null, primary key (id)); 
+create table dependentes(id int (4) auto_increment not null, nome int (2) not null, usr_dep int(4) primary key (id));
+
+alter table dependentes add foreign key (usr) references usuarios(id);
+
+insert into usuarios values (default, "João Silva"), (default, "Maria Severina Souza"), (default, "Francisco Barros"), (default, "José Pimenta");
+insert into usuarios values (default, "Dayse Silva", 0), (default, "Pedro Silva", 0), (default, "Silvio Pimenta", 3), (default, "Amélia Silva", 0), (default, "Danilo Barros", 2), (default, "Ana Souza", 1);
+
+select usuarios.id, usuarios.nome, dependentes.nome from usuarios join dependentes on usuarios.id = dependentes.usr_dep;
+select usuarios.id, usuarios.nome, dependentes.nome from usuarios right join dependentes on usuarios.id = dependentes.usr_dep;
+select usuarios.id, usuarios.nome, dependentes.nome from usuarios left join dependentes on usuarios.id = dependentes.usr_dep;
