@@ -1,0 +1,16 @@
+ATIVIDADE:
+Explique quais são as seis regras de uma API REST.
+
+RESPOSTA:
+
+Stateless: Cada requisição é totalmente independente, é enviada de um cliente a um servidor contendo toda a informação necessária e compreensível para que seja realizado o processamento, não sendo de responsabilidade do servidor armazenar qualquer tipo de contexto.  
+
+Cliente-servidor: Trata da separação da arquitetura e responsabilidades em dois segmentos, o cliente não se preocupa com os detalhes mais específicos, bem como o servidor pode focar nas tarefas específicas, abstraindo questões de interface, etc. Os dois lados podem evoluir de forma independente.
+
+Interface Uniforme: É a interoperabilidade entre os componentes cliente e servidor. Como o cliente e servidor compartilham da mesma interface, é necessário estabelecer um contrato para a comunicação entre eles. Existe uma série de boas práticas para fazer uniformizar essa comunicação.
+
+Armazenamento em cache: Utilizado para melhorar a performance de comunicação entre aplicações, otimizando o tempo de resposta  na comunicação entre cliente-servidor. É de responsabilidade do servidor controlar as diretivas de cache através do cabeçalho HTTP (HTTP Header).
+
+Sistemas em camadas: A separação de responsabilidades é importante nesse modelo de arquitetura. Os princípios e as boas práticas na arquitetura e design de um projeto, sugerem a construção de camadas independentes e auto gerenciadas, em que cada camada não pode conhecer as demais camadas. Caso ocorra mudanças em uma delas, as demais não serão impactadas. Nesse modelo, o cliente não deve conectar-se diretamente ao servidor da aplicação, porém uma camada de balanceamento de carga deverá ser acionada para essa responsabilidade.
+
+Código sob demanda: É considerado um item opicional. Permite que o código do cliente seja baixado e executado dentro da aplicação do lado do cliente.
