@@ -55,7 +55,7 @@ PATCH https://site.exemplo.com/index.html HTTP/1.1
 Exemplo de requisição:
 TRACE https://site.exemplo.com/index.html
 
-- WSDL: Web Services Description Language é uma notação XML para descrever um serviço web, é possível passar informações, como por exemplo, como cada serviço de um endpoint pode ser chamado, quais os parâmetros e tipos de dados esperados e qual o tipo de retorno será enviado como resposta.
+- WSDL: Web Services Description Language é uma notação XML para descrever um web service, é possível definir como os clientes devem se comunicar com o web service. Foi criado para eliminar ao máximo a necessidade de comunicação entre os desenvolvedores em uma integração de dados. É possível especificar, por exemplo, quais serão os endereços expostos para consumo (end points), quais serão as operações disponíveis, qual será a resposta recebida pelo cliente, qual será a requisição enviada.
 
 
 
