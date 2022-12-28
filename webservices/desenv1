@@ -1,0 +1,59 @@
+ATIVIDADE:
+Faça um projeto explicando como funcionam os métodos HTTP com exemplos de requisições, sua utilização e em qual momento cada um dos métodos devem ser utilizados. Além disso, descreva o que é WSDL, seu significado e sua função.
+
+RESPOSTA:
+
+- HTTP GET - solicita a representação de um recurso específico. Requisições utilizando o método GET devem retornar apenas dados. Exemplo de requisição:
+ 
+GET https://site.exemplo.com/ HTTP/1.1
+
+- HTTP POST - O método POST é utilizado para submeter uma entidade a um recurso específico, frequentemente causando uma mudança no estado do recurso ou efeitos colaterais no servidor. Envia dados para o servidor. 
+
+Exemplo de requisição:
+POST https://site.exemplo.com/cadastro/ HTTP/1.1{
+  "nome":"João Silva",
+  "nascimento": "01/01/2000"
+  }
+
+- HTTP PUT - O método PUT substitui todas as atuais representações do recurso de destino pela carga de dados da requisição. 
+
+Exemplo de requisição:
+PUT https://site.exemplo.com/usuarios/55{
+  "nome":"Joana Darc"
+  "nascimento":"30/05/1431"
+   }
+
+- HTTP DELETE - O método DELETE remove um recurso especificado. 
+
+Exemplo de requisição:
+DELETE https://site.exemplo.com/usuarios/42 HTTP/1.1
+  
+- HTTP HEAD - solicita uma resposta de forma idêntica ao método GET, porém sem conter o corpo da resposta, apenas os cabeçalhos. 
+
+Exemplo de requisição:
+HEAD https://site.exemplo.com/
+
+- CONNECT - estabelece um túnel para o servidor identificado pelo recurso de destino. Pode ser utilizado para acessar sites que usam SSL (https). 
+
+Exemplo de requisição:
+CONNECT www.example.com:443
+
+- OPTIONS é usado para descrever as opções de comunicação com o recurso de destino. Pode ser passada uma url ou * para o servidor inteiro. 
+
+Exemplos de requisição:
+OPTIONS https://site.exemplo.com/index.html HTTP/1.1
+OPTIONS * HTTP/1.1
+curl -X OPTIONS https://example.org -i
+
+- PATCH é utilizado para aplicar modificações parciais em um recurso. Em contraste ao PUT, o método PATCH não é idempotente, ou seja, requisições sucessivas idênticas podem obter efeitos distintos. 
+
+Exemplo de requisição:
+PATCH https://site.exemplo.com/index.html HTTP/1.1
+
+- TRACE executa um teste de chamada loopback junto com o caminho para o recurso de destino. Muito útil para debug. 
+
+Exemplo de requisição:
+TRACE https://site.exemplo.com/index.html
+
+
+
