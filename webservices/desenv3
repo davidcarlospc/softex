@@ -1,0 +1,26 @@
+package app;
+
+import java.util.Date;
+import javax.jws.WebService;
+
+@WebService(endpointInterface = "app.BancoServer")
+public class BancoServerImpl implements BancoServer{
+    public String pegarBoleto(String codigoBarras){
+        return "Boleto para o código" + codigoBarras;
+    }
+    public String criarBoleto(float valor, String cpfCliente){
+        return "123.456.78910";
+    }
+    public boolean verificarPagamento(String codigoBarras) {
+        return true;
+    }
+    public boolean cancelarBoleto(String codigoBarras){
+        return false;
+    }
+}
+public class BancoServerPublisher {
+    public static void main(String[] args) {
+        Endpoint.publish("http://127.0.0.1:3030/app",
+        new BancoServerImpl());
+    }
+}
