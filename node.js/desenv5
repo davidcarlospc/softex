@@ -1,0 +1,29 @@
+//ATIVIDADE:
+//Crie um código Node.JS usando a biblioteca Express. Nele, você deve receber quatro tipos de requisições e responder cada uma com strings diferentes. Por fim, explique como rodar o código.
+
+//RESPOSTA:
+
+const express = require("express");
+const app = express();
+
+app.listen(8080, () => {
+    console.log("Servidor iniciado na porta 8080");
+})
+app.get('/', (req, res) => {
+    res.send("Página principal")
+})
+app.get('/teste', (req, res) => {
+    return res.send('Recebimento teste de uma solicitação HTTP GET')
+})
+app.post('/teste', (req, res) => {
+    return res.send('Recebimento teste de uma solicitação HTTP POST')
+})
+app.put('/teste', (req, res) => {
+    return res.send('Recebimento teste de uma solicitação HTTP PUT')
+})
+app.delete('/teste', (req, res) => {
+    return res.send('Recebimento teste de uma solicitação HTTP DELETE')
+})
+
+// - Para testar, salve o arquivo como server.js, acesse a pasta dele, depois execute o código via terminal com o comando node server.js
+// - Em seguida, foi utilizado o software postman para simular as requisições para o servidor. Navegue até https://www.postman.com/downloads/, baixe o programa e execute o instalador no seu computador. Na janela do programa, é necessário informar o método (GET, POST, PUT ou DELETE) e a rota ao lado (no nosso caso, existem as rotas http://localhost:8080/ e http://localhost:8080/teste/), após preencher corretamente e clicar no botão send, serão apresentados os retornos correspondentes na área inferior do software.
