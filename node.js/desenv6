@@ -1,0 +1,64 @@
+//ATIVIDADE:
+//Faça um servidor web para responder requisições com diferentes status HTTP, os quais devem estar de acordo com os parâmetros enviados pelo placeholder nas requisições. Exemplo: a rota “/listar/50” vai retornar o HTTP 404; a rota /listar/10 vai retornar o HTTP 200 com alguma string.
+
+//RESPOSTA:
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const app = express();
+
+app.use(bodyParser.json());
+app.use(cors());
+
+let revista = [
+    { titulo: 'Primeiro Artigo' }
+];
+
+app.listen(8080, () => {
+    console.log('Servidor ATIVO na porta 8080')
+});
+
+app.get('/', (req, res) => {
+    res.send('Revista de artigos').status(200);
+});
+
+app.post('/artigos/add', (req,res) => {
+    let artigo = req.body;
+    let pos = revista.length + 1;
+    revista.push(artigo);
+    artigo.pos = pos;
+    res.status(201).send(artigo);
+});
+
+app.get('/artigos/ver/:id', (req,res) => {
+    let id = req.params.id;
+    if (id > 0 && id <= revista.length){
+        res.status(200).send(revista[id - 1]);
+    } else res.status(404).send('Artigo não encontrado');
+});
+
+app.get ('/artigos/ver_todos', (req,res) => {
+    res.status(200).send(revista);
+});
+
+app.put('/artigos/editar/:id', (req,res) => {
+    let id = req.params.id;
+    if (id > 0 && id <= revista.length) {
+        let artigo = req.body;
+        revista[id - 1] = artigo;
+        res.status(200).send(artigo);
+    } else res.status(404).send('Artigo não encontrado');
+})
+
+app.delete('/artigos/remover/:id', (req,res) => {
+    let id = req.params.id;
+    if (id > 0 && id <= revista.length) {
+        revista.splice(id -1, 1);
+        res.status(200).send('Artigo removido com sucesso');
+    } else res.status(404).send('Artigo não encontrado');
+});    
+
+app.all('*', (req,res) => {
+    res.status(404).send('Página não encontrada')
+})
