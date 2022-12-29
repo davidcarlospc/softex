@@ -1,0 +1,82 @@
+//ATIVIDADE:
+//Demonstre como fazer as quatro operações de CRUD e suas rotas para obter o recurso de um livro que está no estoque de uma livraria. Um livro possui informações como nome, autor e ISBN.
+
+//RESPOSTA:
+
+# Adicionar livro #
+URI:
+POST http://livraria.exemplo.com:8080/adicionar
+
+PARÂMETROS BODY (JSON):
+{
+  "NOME":"Sistemas Operacionais Modernos",
+  "AUTOR":"Andrew S. Tanenbaum",
+  "ISBN":"8543005671"
+}
+
+Exemplo de resposta http:
+{
+"response_http": "201"    
+"NOME": "Sistemas Operacionais Modernos, 4ª ed."
+"AUTOR": "Andrew S. Tanenbaum"
+"ISBN": 8543005671
+"cadastro": "2015-12-07"
+"atualizado": "2015-12-07"
+}
+
+# Buscar livro #
+URI:
+GET http://livraria.exemplo.com:8080/buscar?ISBN={8543005671}
+
+Exemplo de resposta http:
+{
+"response_http": "200"    
+"NOME": "Sistemas Operacionais Modernos, 4ª ed."
+"AUTOR": "Andrew S. Tanenbaum"
+"ISBN": 8543005671
+"cadastro": "2015-12-07"
+"atualizado": "2015-12-07"
+}
+
+# Modificar livro #
+URI:
+PUT http://livraria.exemplo.com:8080/livro/{isbn}/modificar
+
+PARÂMETROS BODY (JSON):
+{
+  "NOME":"Sistemas Operacionais Modernos: 4ª edição",
+  "AUTOR":"ANDREW STUART TANEMBAUM",
+  "ISBN":"978-8543005676"
+}
+
+Exemplo de resposta http:
+{
+"response_http": "200"    
+"NOME": "Sistemas Operacionais Modernos: 4ª edição"
+"AUTOR": "ANDREW STUART TANEMBAUM"
+"ISBN": 978-8543005676
+"cadastro": "2012-12-11"
+"atualizado": "2022-07-15"
+"nome_anterior": "Sistemas Operacionais Modernos, 4ª ed."
+"autor_aterior": "Andrew S. Tanenbaum"
+"isbn_anterior" : 8543005671
+}
+
+# Excluir livro #
+DELETE http://livraria.exemplo.com:8080/excluir
+
+PARÂMETROS BODY (JSON):
+{
+  "ISBN":"978-8543005676"
+}
+
+Exemplo de resposta http:
+{
+"response_http": "200"    
+"Nome": "Sistemas Operacionais Modernos: 4ª edição"
+"Autor": "ANDREW STUART TANEMBAUM"
+"ISBN": 978-8543005676
+"cadastro": "2012-12-11"
+"atualizado": "2022-07-15"
+"excluido": "2022-12-11"
+}
