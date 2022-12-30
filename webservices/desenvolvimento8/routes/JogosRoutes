@@ -1,0 +1,51 @@
+const express = require('express');
+const router = express.Router();
+const mysql = require('mysql');
+const conexao = mysql.createConnection({
+    host: "localhost",
+    user: "sysdba",
+    password: "Abc@1234",
+    database: 'jogos'
+  });
+
+  conexao.connect(function(err) {
+    if (err) throw err;
+    console.log("Conexão estabelecida com sucesso!");
+});
+
+router
+    .post("/adicionar", (req, res) => {
+        console.log("Adicionar jogo");
+        conexao.query(`inssert into games (cod, titulo, desenvolvedor) values (null, "${req.body.name}" , ${req.body.desenvolvedor} );`, (err, result) => {
+            if (err) throw err;
+            res.status(201).send(result)
+        })
+    })
+    .get('/jogos', (req, res) => {
+        console.log("Exibir todos os jogos");
+        conexao.query('select * from jogos order by cod;', (err, result)=> {
+            res.status(200).send(result)
+        })
+    })
+    .get("/buscar/:id", (req, res) => {
+        console.log("Buscar jogo pelo código")
+        conexao.query(`select * from games where cod = ${req.params.cod};`, (err, result) => {
+            if (err) throw err;
+            res.status(200).send(result)
+        })
+    })    
+    .put("/jogo/:id/editar", (req, res) => {
+        console.log("Editar informações")
+        conexao.query(`update games set name = "${req.body.titulo}" , desenvolvedor = "${req.body.desenvolvedor}" where cod = ${req.params.id}`, (err, result) => {
+            if (err) throw err;
+            res.status(200).send(result)
+        })
+    })
+    .delete("/excluir/:id", (req, res) => {
+        console.log("Excluir jogo")
+        con.query(`delete from games where cod = ${req.params.cod};`, (err, result) => {
+            if (err) throw err;
+            res.status(200).send(result)
+        })
+    })
+module.exports = router;
