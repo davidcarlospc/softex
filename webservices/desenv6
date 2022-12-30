@@ -1,0 +1,62 @@
+//ATIVIDADE
+//Demonstre como fazer as quatro operações de CRUD e suas rotas para obter o recurso de um livro que está no estoque de uma livraria. Um livro possui informações como nome, autor e ISBN.
+
+//RESPOSTA:
+
+// BIBLIOTECA VIRTUAL
+const express = require('express');
+const app = express();
+app.use(express.json())
+// Iniciar array para os livros
+let biblioteca = []
+// Mensagem da console
+app.listen(8080, () => {
+    console.log('Servidor ATIVO na porta 8080')
+});
+//Mensagem para a rota raiz
+app.get('/', (req, res) => {
+    res.send('Biblioteca Virtual').status(200);
+});
+
+// Create
+app.post('/adicionar', (req,res) => {
+    const {titulo, autor, isbn} = req.body
+    const livro = {titulo, autor, isbn}
+    revista.push(livro);
+    res.status(201).send(livro);
+});
+
+// Read
+app.get('/buscar/:isbn', (req,res) => {
+    const {isbn} = req.params
+    const livro = biblioteca.find((biblioteca) => livro.isbn == isbn)
+    if (!book) res.status(404).json('Livro não encontrado');
+    return res.status(200).json(livro)
+});
+
+app.get ('/ver_todos', (req,res) => {
+    res.status(200).send(biblioteca);
+});
+
+// Update
+app.put('/livro/:isbn/modificar', (req,res) => {
+    const {tituo, autor, isbn} = req.body 
+    const {isbn} = req.params
+    const livro = biblioteca.find(livro => livro.isbn == livro.isbn)
+    livro.isbn = livro.isbn
+    livro.title = title ? title : livro.title
+    if (livro) 
+        return res.status(200).json(livro);
+        else res.status(404).json('Livro não encontrado');
+})
+
+// DELETE
+app.delete('/excluir/:isbn', (req,res) => {
+    const {isbn} = req.params
+    const filtroLivro = biblioteca.filter(livro = book.isbn !== isbn)
+    const livro = biblioteca.find(livro => livro.isbn == livro.isbn)
+    biblioteca - filtroLivro
+    if (livro) 
+    return res.status(200).json(livro);
+    else res.status(404).json('Livro não encontrado');
+})
